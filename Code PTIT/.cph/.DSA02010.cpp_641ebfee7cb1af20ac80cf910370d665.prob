@@ -1,0 +1,1 @@
+{"name":"Local: DSA02010","url":"d:\\Clone Repository\\DSA\\Code PTIT\\DSA02010.cpp","tests":[{"id":1739898164100,"input":"1\n4 8\n2 4 6 8","output":"[2 2 2 2] [2 2 4] [2 6] [4 4] [8]"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Clone Repository\\DSA\\Code PTIT\\DSA02010.cpp","group":"local","local":true}

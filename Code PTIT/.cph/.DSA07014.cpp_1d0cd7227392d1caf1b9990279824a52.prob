@@ -1,0 +1,1 @@
+{"name":"Local: DSA07014","url":"d:\\Clone Repository\\DSA\\Code PTIT\\DSA07014.cpp","tests":[{"id":1740144679696,"input":"2\n-+8/632\n-+7*45+20","output":"8\n25"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Clone Repository\\DSA\\Code PTIT\\DSA07014.cpp","group":"local","local":true}

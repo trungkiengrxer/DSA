@@ -1,0 +1,1 @@
+{"name":"Local: BFS","url":"d:\\Clone Repository\\DSA\\TRR\\BFS.cpp","tests":[{"id":1740382319986,"input":"5\n\n0 1 0 0 1 \n\n1 0 1 1 1 \n\n0 1 0 1 0 \n\n0 1 1 0 1 \n\n1 1 0 1 0 ","output":"1 2 5 3 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Clone Repository\\DSA\\TRR\\BFS.cpp","group":"local","local":true}

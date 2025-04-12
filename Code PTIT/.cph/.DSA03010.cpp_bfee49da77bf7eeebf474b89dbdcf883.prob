@@ -1,0 +1,1 @@
+{"name":"Local: DSA03010","url":"d:\\Clone Repository\\DSA\\Code PTIT\\DSA03010.cpp","tests":[{"id":1738842543399,"input":"2\n4\n4 3 2 6\n5\n4 2 7 6 9","output":"29\n62"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Clone Repository\\DSA\\Code PTIT\\DSA03010.cpp","group":"local","local":true}

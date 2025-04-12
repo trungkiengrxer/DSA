@@ -1,0 +1,1 @@
+{"name":"Local: 1","url":"d:\\Clone Repository\\DSA\\Test\\1.cpp","tests":[{"id":1742259535332,"input":"2\n10 24\n1000 1020","output":"16\n20"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Clone Repository\\DSA\\Test\\1.cpp","group":"local","local":true}

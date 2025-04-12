@@ -1,0 +1,1 @@
+{"name":"Local: DSA08007","url":"d:\\Clone Repository\\DSA\\Code PTIT\\DSA08007.cpp","tests":[{"id":1739706332881,"input":"3\n10\n100\n200","output":"2\n4\n7"},{"id":1739710690183,"input":"1\n9223372036854780000","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Clone Repository\\DSA\\Code PTIT\\DSA08007.cpp","group":"local","local":true}
