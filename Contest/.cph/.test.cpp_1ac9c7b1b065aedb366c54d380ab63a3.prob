@@ -1,1 +1,1 @@
-{"name":"Local: test","url":"d:\\Clone Repository\\DSA\\Contest\\test.cpp","tests":[{"id":1742636415892,"input":"4 7\n1 2 3 4","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Clone Repository\\DSA\\Contest\\test.cpp","group":"local","local":true}
+{"name":"Local: test","url":"d:\\Clone Repository\\DSA\\Contest\\test.cpp","tests":[{"id":1742636415892,"input":"3\n100\n50\n200","output":"Yes"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Clone Repository\\DSA\\Contest\\test.cpp","group":"local","local":true}

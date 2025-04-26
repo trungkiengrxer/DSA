@@ -18,17 +18,14 @@ Các phép toán bao gồm +, -, *, /, ^. Phép lũy thừa có ưu tiên cao h�
 #include <string>
 #include <vector>
 
-int priority(char c) {
-    if (c == '+')
+int priority(char x) {
+    if (x == '-' || x == '+')
         return 0;
-    else if (c == '-')
+    else if (x == '*' || x == '/')
         return 1;
-    else if (c == '*')
+    else if (x == '^')
         return 2;
-    else if (c == '/')
-        return 3;
-    else
-        return 4;
+    return -1;
 }
 
 int main() {
@@ -37,30 +34,43 @@ int main() {
 
     while (t--) {
         std::string s;
+        std::cin >> s;
+
         std::vector<char> result;
         std::stack<char> stack;
 
         for (const char &x : s) {
-            if (x == '(')
-                stack.push(x);
-            else if (isalnum(x))
+            if (isalnum(x))
                 result.push_back(x);
-            else {
-                char y = stack.top();
-                if (priority(x) >= priority(y))
-                    stack.push(x);
-                else {
-                    stack.pop();
-                    result.push_back(y);
-                    stack.push(x);
+            else if (x == '(')
+                stack.push(x);
+            else if (x == ')') {
+                while (true) {
+                    if (!stack.empty()) {
+                        char y = stack.top();
+                        stack.pop();
+
+                        if (y == '(') break;
+                        result.push_back(y);
+                    } else
+                        break;
                 }
+            } else {
+                while (!stack.empty() && stack.top() != '(' && ((x != '^' && priority(x) <= priority(stack.top())) || (x == '^' && priority(x) < priority(stack.top())))) {
+                    result.push_back(stack.top());
+                    stack.pop();
+                }
+                stack.push(x);
             }
         }
+
+        while (!stack.empty()) {
+            char x = stack.top();
+            stack.pop();
+            result.push_back(x);
+        }
+
+        for (const char &x : result) std::cout << x;
+        std::cout << "\n";
     }
 }
-
-// A+(B*C)
-/*
-A
-ABC*+
-*/

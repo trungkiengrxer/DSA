@@ -1,9 +1,9 @@
 #include <iostream>
-#include <list>
 
+const double epsilon = 1e-9;
 int main() {
-    std::list<int> list(2, 100);
-    list.push_front(200);
-    list.push_front(300);
-    for (auto num : list) std::cout << num << "\n";
+    if (0.1 + 0.2 - 0.3 <= epsilon)
+        std::cout << "Yes";
+    else
+        std::cout << "No";
 }
