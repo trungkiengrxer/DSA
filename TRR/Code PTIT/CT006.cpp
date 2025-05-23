@@ -17,3 +17,60 @@ Dòng sau ghi dãy các đỉnh trên chu trình Hamilton tìm được 
 Nếu không có chu trình Hamilton thì ghi giá trị 0.
 */
 
+#include <algorithm>
+#include <iostream>
+#include <vector>
+
+const int INF = 10000;
+int n, start;
+std::vector<std::vector<int>> c;
+std::vector<bool> visited;
+std::vector<int> path, best_path;
+int min_weight = INF * 100;
+
+void hamilton(int u, int current_weight) {
+    if (path.size() == n) { 
+        if (c[u][start] != INF) {
+            int total_weight = current_weight + c[u][start];
+            if (total_weight < min_weight) {
+                min_weight = total_weight;
+                best_path = path;
+                best_path.push_back(start);
+            }
+        }
+        return;
+    }
+
+    for (int v = 1; v <= n; ++v) {
+        if (!visited[v] && c[u][v] != INF) {
+            visited[v] = true;
+            path.push_back(v);
+            hamilton(v, current_weight + c[u][v]);
+            path.pop_back();
+            visited[v] = false;
+        }
+    }
+}
+
+
+int main() {
+    std::cin >> n >> start;
+    c.assign(n + 1, std::vector<int>(n + 1));
+    visited.assign(n + 1, false);
+
+    for (int i = 1; i <= n; ++i)
+        for (int j = 1; j <= n; ++j) std::cin >> c[i][j];
+
+    visited[start] = true;
+    path.push_back(start);
+    hamilton(start, 0);
+
+    if (min_weight == INF * 100) {
+        std::cout << 0;
+    } else {
+        std::cout << min_weight << "\n";
+        for (const int &v : best_path) std::cout << v << " ";
+    }
+
+    return 0;
+}

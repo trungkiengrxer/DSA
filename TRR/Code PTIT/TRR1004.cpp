@@ -4,18 +4,18 @@
 #include <vector>
 
 int main() {
-    std::ifstream in("DT.INP");
-    std::ofstream out("DT.OUT");
+    std::ifstream input("DT.INP");
+    std::ofstream print("DT.OUT");
 
     int t, n, m;
     std::vector<std::pair<int, int>> edges;
     std::unordered_map<int, int> map;
 
-    in >> t >> n >> m;
+    input >> t >> n >> m;
 
     for (int i = 1; i <= m; ++i) {
         int x, y;
-        in >> x >> y;
+        input >> x >> y;
         edges.push_back({x, y});
     }
 
@@ -25,9 +25,9 @@ int main() {
             ++map[v2];
         }
 
-        for (int i = 1; i <= n; ++i) out << map[i] << " ";
+        for (int i = 1; i <= n; ++i) print << map[i] << " ";
     } else {
-        out << n << "\n";
+        print << n << "\n";
         
         std::vector<std::vector<int>> a(n + 1, std::vector<int>(n + 1, 0));
 
@@ -37,8 +37,8 @@ int main() {
         }
 
         for (int i = 1; i <= n; ++i) {
-            for (int j = 1; j <= n; ++j) out << a[i][j] << " ";
-            out << "\n";
+            for (int j = 1; j <= n; ++j) print << a[i][j] << " ";
+            print << "\n";
         }
     }
 }
